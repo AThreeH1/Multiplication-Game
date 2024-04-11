@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Multiplication Game</h1>
+        <div id="question">
+            <p id="num1">{{ num1 }}</p>
+            <p>&times;</p>
+            <p id="num2">{{ num2 }}</p>
+            <p>=</p>
+            <input type="text" id="answer" placeholder="Enter your answer">
+            <button id="submit">Submit</button>
+        </div>
+        <div id="feedback"></div>
+        <div id="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
